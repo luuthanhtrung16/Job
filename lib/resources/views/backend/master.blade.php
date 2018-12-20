@@ -8,7 +8,7 @@
 	<meta name="description" content="au theme template">
 	<meta name="author" content="Hau Nguyen">
 	<meta name="keywords" content="au theme template">
-	<base href="{{asset('public/backend')/}}">
+	<base href="{{asset('public/backend')}}/">
 	<!-- Title Page-->
 	<title>@yield('title')</title>
 
@@ -44,10 +44,13 @@
 					<div class="header-mobile-inner">
 						<a class="logo" href="index.html">
 							<img src="images/icon/logo.png" alt="CoolAdmin" />
+
 						</a>
 						<button class="hamburger hamburger--slider" type="button">
 							<span class="hamburger-box">
-								<span class="hamburger-inner"></span>
+								<span class="hamburger-inner">
+								</span>
+								
 							</span>
 						</button>
 					</div>
@@ -58,93 +61,119 @@
 					<ul class="navbar-mobile__list list-unstyled">
 						<li class="has-sub">
 							<a class="js-arrow" href="#">
-								<i class="fas fa-tachometer-alt"></i>Dashboard</a>
+								<i class="fas fa-tachometer-alt"></i>Trang Quản Trị
+							</a>
 							<ul class="navbar-mobile-sub__list list-unstyled js-sub-list">
 								<li>
-									<a href="index.html">Dashboard 1</a>
+									<a href="index.html">Dashboard 1
+									</a>
 								</li>
 								<li>
-									<a href="index2.html">Dashboard 2</a>
+									<a href="index2.html">Dashboard 2
+									</a>
 								</li>
 								<li>
-									<a href="index3.html">Dashboard 3</a>
+									<a href="index3.html">Dashboard 3
+									</a>
 								</li>
 								<li>
-									<a href="index4.html">Dashboard 4</a>
+									<a href="index4.html">Dashboard 4
+									</a>
 								</li>
 							</ul>
 						</li>
 						<li>
 							<a href="chart.html">
-								<i class="fas fa-chart-bar"></i>Charts</a>
+								<i class="fas fa-chart-bar"></i>Charts
+							</a>
 						</li>
 						<li>
 							<a href="table.html">
-								<i class="fas fa-table"></i>Tables</a>
+								<i class="fas fa-table"></i>Tables
+							</a>
 						</li>
 						<li>
 							<a href="form.html">
-								<i class="far fa-check-square"></i>Forms</a>
+								<i class="far fa-check-square"></i>Forms
+							</a>
 						</li>
 						<li>
 							<a href="#">
-								<i class="fas fa-calendar-alt"></i>Calendar</a>
+								<i class="fas fa-calendar-alt"></i>Calendar
+							</a>
 						</li>
 						<li>
 							<a href="map.html">
-								<i class="fas fa-map-marker-alt"></i>Maps</a>
+								<i class="fas fa-map-marker-alt"></i>Maps
+							</a>
 						</li>
 						<li class="has-sub">
 							<a class="js-arrow" href="#">
-								<i class="fas fa-copy"></i>Pages</a>
+								<i class="fas fa-copy"></i>Pages
+							</a>
 							<ul class="navbar-mobile-sub__list list-unstyled js-sub-list">
 								<li>
-									<a href="login.html">Login</a>
+									<a href="login.html">Login
+									</a>
 								</li>
 								<li>
-									<a href="register.html">Register</a>
+									<a href="register.html">Register
+									</a>
 								</li>
 								<li>
-									<a href="forget-pass.html">Forget Password</a>
+									<a href="forget-pass.html">Forget Password
+									</a>
 								</li>
 							</ul>
 						</li>
 						<li class="has-sub">
 							<a class="js-arrow" href="#">
-								<i class="fas fa-desktop"></i>UI Elements</a>
+								<i class="fas fa-desktop"></i>UI Elements
+							</a>
 							<ul class="navbar-mobile-sub__list list-unstyled js-sub-list">
 								<li>
-									<a href="button.html">Button</a>
+									<a href="button.html">Button
+									</a>
 								</li>
 								<li>
-									<a href="badge.html">Badges</a>
+									<a href="badge.html">Badges
+									</a>
 								</li>
 								<li>
-									<a href="tab.html">Tabs</a>
+									<a href="tab.html">Tabs
+									</a>
 								</li>
 								<li>
-									<a href="card.html">Cards</a>
+									<a href="card.html">Cards
+									</a>
 								</li>
 								<li>
-									<a href="alert.html">Alerts</a>
+									<a href="alert.html">Alerts
+									</a>
 								</li>
 								<li>
-									<a href="progress-bar.html">Progress Bars</a>
+									<a href="progress-bar.html">Progress Bars
+									</a>
 								</li>
 								<li>
-									<a href="modal.html">Modals</a>
+									<a href="modal.html">Modals
+									</a>
 								</li>
 								<li>
-									<a href="switch.html">Switchs</a>
+									<a href="switch.html">Switchs
+									</a>
 								</li>
 								<li>
-									<a href="grid.html">Grids</a>
+									<a href="grid.html">Grids
+									</a>
 								</li>
 								<li>
-									<a href="fontawesome.html">Fontawesome Icon</a>
+									<a href="fontawesome.html">Fontawesome Icon
+									</a>
 								</li>
 								<li>
-									<a href="typo.html">Typography</a>
+									<a href="typo.html">Typography
+									</a>
 								</li>
 							</ul>
 						</li>
@@ -159,6 +188,7 @@
 			<div class="logo">
 				<a href="#">
 					<img src="images/icon/logo.png" alt="Cool Admin" />
+
 				</a>
 			</div>
 			<div class="menu-sidebar__content js-scrollbar1">
@@ -166,93 +196,112 @@
 					<ul class="list-unstyled navbar__list">
 						<li class="has-sub">
 							<a class="js-arrow" href="#">
-								<i class="fas fa-tachometer-alt"></i>Dashboard</a>
-							<ul class="list-unstyled navbar__sub-list js-sub-list">
-								<li>
-									<a href="index.html">Dashboard 1</a>
-								</li>
-								<li>
-									<a href="index2.html">Dashboard 2</a>
-								</li>
-								<li>
-									<a href="index3.html">Dashboard 3</a>
-								</li>
-								<li>
-									<a href="index4.html">Dashboard 4</a>
-								</li>
-							</ul>
+								<i class="fas fa-tachometer-alt"></i>Dashboard
+							</a>
+							
 						</li>
 						<li>
 							<a href="chart.html">
-								<i class="fas fa-chart-bar"></i>Charts</a>
+								<i class="fas fa-chart-bar"></i>Quản lý người dùng
+							</a>
 						</li>
 						<li>
 							<a href="table.html">
-								<i class="fas fa-table"></i>Tables</a>
+								<i class="fas fa-table"></i>Quản lý job
+							</a>
 						</li>
 						<li>
 							<a href="form.html">
-								<i class="far fa-check-square"></i>Forms</a>
+								<i class="far fa-check-square"></i>Quản lý công ty đối tác
+							</a>
 						</li>
 						<li>
 							<a href="#">
-								<i class="fas fa-calendar-alt"></i>Calendar</a>
+								<i class="fas fa-calendar-alt"></i>Quản lý location
+							</a>
 						</li>
 						<li>
 							<a href="map.html">
-								<i class="fas fa-map-marker-alt"></i>Maps</a>
+								<i class="fas fa-map-marker-alt"></i>Quản lý comment
+							</a>
+						</li>
+						<li>
+							<a href="map.html">
+								<i class="fas fa-map-marker-alt"></i>Quản lý thống kê
+							</a>
+						</li>
+						<li>
+							<a href="map.html">
+								<i class="fas fa-map-marker-alt"></i>Mail
+							</a>
 						</li>
 						<li class="has-sub">
 							<a class="js-arrow" href="#">
-								<i class="fas fa-copy"></i>Pages</a>
+								<i class="fas fa-copy"></i>Quản lý chi tiết job
+							</a>
 							<ul class="list-unstyled navbar__sub-list js-sub-list">
 								<li>
-									<a href="login.html">Login</a>
+									<a href="login.html">Login
+									</a>
 								</li>
 								<li>
-									<a href="register.html">Register</a>
+									<a href="register.html">Register
+									</a>
 								</li>
 								<li>
-									<a href="forget-pass.html">Forget Password</a>
+									<a href="forget-pass.html">Forget Password
+									</a>
 								</li>
 							</ul>
 						</li>
 						<li class="active has-sub">
 							<a class="js-arrow" href="#">
-								<i class="fas fa-desktop"></i>UI Elements</a>
+								<i class="fas fa-desktop"></i>Quản lý hình thức
+							</a>
 							<ul class="list-unstyled navbar__sub-list js-sub-list">
 								<li>
-									<a href="button.html">Button</a>
+									<a href="button.html">Button
+									</a>
 								</li>
 								<li>
-									<a href="badge.html">Badges</a>
+									<a href="badge.html">Badges
+									</a>
 								</li>
 								<li>
-									<a href="tab.html">Tabs</a>
+									<a href="tab.html">Tabs
+									</a>
 								</li>
 								<li>
-									<a href="card.html">Cards</a>
+									<a href="card.html">Cards
+									</a>
 								</li>
 								<li>
-									<a href="alert.html">Alerts</a>
+									<a href="alert.html">Alerts
+									</a>
 								</li>
 								<li>
-									<a href="progress-bar.html">Progress Bars</a>
+									<a href="progress-bar.html">Progress Bars
+									</a>
 								</li>
 								<li>
-									<a href="modal.html">Modals</a>
+									<a href="modal.html">Modals
+									</a>
 								</li>
 								<li>
-									<a href="switch.html">Switchs</a>
+									<a href="switch.html">Switchs
+									</a>
 								</li>
 								<li>
-									<a href="grid.html">Grids</a>
+									<a href="grid.html">Grids
+									</a>
 								</li>
 								<li>
-									<a href="fontawesome.html">Fontawesome Icon</a>
+									<a href="fontawesome.html">Fontawesome Icon
+									</a>
 								</li>
 								<li>
-									<a href="typo.html">Typography</a>
+									<a href="typo.html">Typography
+									</a>
 								</li>
 							</ul>
 						</li>
@@ -279,7 +328,8 @@
 								<div class="noti-wrap">
 									<div class="noti__item js-item-menu">
 										<i class="zmdi zmdi-comment-more"></i>
-										<span class="quantity">1</span>
+										<span class="quantity">1
+										</span>
 										<div class="mess-dropdown js-dropdown">
 											<div class="mess__title">
 												<p>You have 2 news message</p>
@@ -291,7 +341,8 @@
 												<div class="content">
 													<h6>Michelle Moreno</h6>
 													<p>Have sent a photo</p>
-													<span class="time">3 min ago</span>
+													<span class="time">3 min ago
+													</span>
 												</div>
 											</div>
 											<div class="mess__item">
@@ -301,17 +352,20 @@
 												<div class="content">
 													<h6>Diane Myers</h6>
 													<p>You are now connected on message</p>
-													<span class="time">Yesterday</span>
+													<span class="time">Yesterday
+													</span>
 												</div>
 											</div>
 											<div class="mess__footer">
-												<a href="#">View all messages</a>
+												<a href="#">View all messages
+												</a>
 											</div>
 										</div>
 									</div>
 									<div class="noti__item js-item-menu">
 										<i class="zmdi zmdi-email"></i>
-										<span class="quantity">1</span>
+										<span class="quantity">1
+										</span>
 										<div class="email-dropdown js-dropdown">
 											<div class="email__title">
 												<p>You have 3 New Emails</p>
@@ -322,7 +376,8 @@
 												</div>
 												<div class="content">
 													<p>Meeting about new dashboard...</p>
-													<span>Cynthia Harvey, 3 min ago</span>
+													<span>Cynthia Harvey, 3 min ago
+													</span>
 												</div>
 											</div>
 											<div class="email__item">
@@ -331,7 +386,8 @@
 												</div>
 												<div class="content">
 													<p>Meeting about new dashboard...</p>
-													<span>Cynthia Harvey, Yesterday</span>
+													<span>Cynthia Harvey, Yesterday
+													</span>
 												</div>
 											</div>
 											<div class="email__item">
@@ -340,17 +396,20 @@
 												</div>
 												<div class="content">
 													<p>Meeting about new dashboard...</p>
-													<span>Cynthia Harvey, April 12,,2018</span>
+													<span>Cynthia Harvey, April 12,,2018
+													</span>
 												</div>
 											</div>
 											<div class="email__footer">
-												<a href="#">See all emails</a>
+												<a href="#">See all emails
+												</a>
 											</div>
 										</div>
 									</div>
 									<div class="noti__item js-item-menu">
 										<i class="zmdi zmdi-notifications"></i>
-										<span class="quantity">3</span>
+										<span class="quantity">3
+										</span>
 										<div class="notifi-dropdown js-dropdown">
 											<div class="notifi__title">
 												<p>You have 3 Notifications</p>
@@ -361,7 +420,10 @@
 												</div>
 												<div class="content">
 													<p>You got a email notification</p>
-													<span class="date">April 12, 2018 06:50</span>
+													<span class="date">
+														April 12, 2018 06:50
+
+													</span>
 												</div>
 											</div>
 											<div class="notifi__item">
@@ -370,7 +432,8 @@
 												</div>
 												<div class="content">
 													<p>Your account has been blocked</p>
-													<span class="date">April 12, 2018 06:50</span>
+													<span class="date">April 12, 2018 06:50
+													</span>
 												</div>
 											</div>
 											<div class="notifi__item">
@@ -379,11 +442,13 @@
 												</div>
 												<div class="content">
 													<p>You got a new file</p>
-													<span class="date">April 12, 2018 06:50</span>
+													<span class="date">April 12, 2018 06:50
+													</span>
 												</div>
 											</div>
 											<div class="notifi__footer">
-												<a href="#">All notifications</a>
+												<a href="#">All notifications
+												</a>
 											</div>
 										</div>
 									</div>
@@ -394,39 +459,47 @@
 											<img src="images/icon/avatar-01.jpg" alt="John Doe" />
 										</div>
 										<div class="content">
-											<a class="js-acc-btn" href="#">john doe</a>
+											<a class="js-acc-btn" href="#">john doe
+											</a>
 										</div>
 										<div class="account-dropdown js-dropdown">
 											<div class="info clearfix">
 												<div class="image">
 													<a href="#">
 														<img src="images/icon/avatar-01.jpg" alt="John Doe" />
+
 													</a>
 												</div>
 												<div class="content">
 													<h5 class="name">
-														<a href="#">john doe</a>
+														<a href="#">john doe
+														</a>
 													</h5>
-													<span class="email">johndoe@example.com</span>
+													<span class="email">johndoe@example.com
+													</span>
 												</div>
 											</div>
 											<div class="account-dropdown__body">
 												<div class="account-dropdown__item">
 													<a href="#">
-														<i class="zmdi zmdi-account"></i>Account</a>
+														<i class="zmdi zmdi-account"></i>Account
+													</a>
 												</div>
 												<div class="account-dropdown__item">
 													<a href="#">
-														<i class="zmdi zmdi-settings"></i>Setting</a>
+														<i class="zmdi zmdi-settings"></i>Setting
+													</a>
 												</div>
 												<div class="account-dropdown__item">
 													<a href="#">
-														<i class="zmdi zmdi-money-box"></i>Billing</a>
+														<i class="zmdi zmdi-money-box"></i>Billing
+													</a>
 												</div>
 											</div>
 											<div class="account-dropdown__footer">
 												<a href="#">
-													<i class="zmdi zmdi-power"></i>Logout</a>
+													<i class="zmdi zmdi-power"></i>Logout
+												</a>
 											</div>
 										</div>
 									</div>
