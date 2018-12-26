@@ -48,7 +48,7 @@
                         <div class="logo">
                             <h1>
                                 <a class="navbar-brand" href="index.html">
-                                    <i class="fab fa-codepen"></i> Replenish</a>
+                                    <i class="fab fa-codepen"></i> Lưu Trungg</a>
                             </h1>
                         </div>
                         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -61,7 +61,7 @@
                         <div class="collapse navbar-collapse" id="navbarSupportedContent">
                             <ul class="navbar-nav ml-lg-auto text-center">
                                 <li class="nav-item active">
-                                    <a class="nav-link" href="index.html">Home
+                                    <a class="nav-link" href="index.html">Trang chủ
                                         <span class="sr-only">(current)</span>
                                     </a>
                                 </li>
