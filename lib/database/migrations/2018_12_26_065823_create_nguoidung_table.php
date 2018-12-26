@@ -18,13 +18,12 @@ class CreateNguoidungTable extends Migration
             $table->string('nd_hoten');
             $table->date('nd_ngaysinh');
             $table->integer('nd_gioitinh');
-            $table->string('nd_email')->unique();
+            $table->string('nd_email',100)->unique();
             $table->string('nd_phone',15);
             $table->string('nd_password');
             $table->string('nd_avatar');
             $table->string('nd_level');
             $table->timestamps();
-           
             $table->rememberToken();
         });
     }
