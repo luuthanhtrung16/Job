@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Máy chủ: 127.0.0.1
--- Thời gian đã tạo: Th12 28, 2018 lúc 10:44 AM
+-- Thời gian đã tạo: Th1 07, 2019 lúc 10:03 AM
 -- Phiên bản máy phục vụ: 10.1.37-MariaDB
 -- Phiên bản PHP: 7.2.12
 
@@ -43,28 +43,29 @@ INSERT INTO `migrations` (`id`, `migration`, `batch`) VALUES
 (20, '2018_12_27_025608_create_kinhnghiemlamviec_table', 3),
 (21, '2018_12_27_030007_create_vieclamdaungtuyen_table', 3),
 (24, '2018_12_27_031831_create_congty_table', 3),
-(231, '2014_10_12_000000_create_users_table', 4),
-(232, '2014_10_12_100000_create_password_resets_table', 4),
-(233, '2018_12_26_065823_create_nguoidung_table', 4),
-(234, '2018_12_26_084522_create_hosoungvien_table', 4),
-(235, '2018_12_27_013850_create-bangcap-table', 4),
-(236, '2018_12_27_025444_create_kynang_table', 4),
-(237, '2018_12_27_031553_create_vieclamdaluu_table', 4),
-(238, '2018_12_27_031751_create_hosocongty_table', 4),
-(239, '2018_12_27_031946_create_capbac_table', 4),
-(240, '2018_12_27_032007_create_loaihinh_table', 4),
-(241, '2018_12_27_034948_create_nganhnghe_table', 4),
-(242, '2018_12_27_035057_create_comment_table', 4),
-(243, '2018_12_27_035132_create_chitietnganh_table', 4),
-(244, '2018_12_27_035250_create_baiviettuyendung_table', 4),
-(245, '2018_12_27_035345_create_thanhpho_table', 4),
-(246, '2018_12_27_071337_create_ngoaingu_table', 4),
-(247, '2018_12_27_071413_create_chuyenmon_table', 4),
-(248, '2018_12_27_071442_create_tinhocvanphong_table', 4),
-(249, '2018_12_28_033609_create_congviecmongmuon_table', 4),
-(250, '2018_12_28_040242_create_kinhnghiemlamviec_table', 4),
-(251, '2018_12_28_074310_create_congty_table', 4),
-(252, '2018_12_28_092757_create_lienhecongty_table', 5);
+(301, '2014_10_12_000000_create_users_table', 4),
+(302, '2014_10_12_100000_create_password_resets_table', 4),
+(303, '2018_12_26_065823_create_nguoidung_table', 4),
+(304, '2018_12_26_084522_create_hosoungvien_table', 4),
+(305, '2018_12_27_013850_create-bangcap-table', 4),
+(306, '2018_12_27_025444_create_kynang_table', 4),
+(307, '2018_12_27_031553_create_vieclamdaluu_table', 4),
+(308, '2018_12_27_031751_create_hosocongty_table', 4),
+(309, '2018_12_27_031946_create_capbac_table', 4),
+(310, '2018_12_27_032007_create_loaihinh_table', 4),
+(311, '2018_12_27_034948_create_nganhnghe_table', 4),
+(312, '2018_12_27_035057_create_comment_table', 4),
+(313, '2018_12_27_035132_create_chitietnganh_table', 4),
+(314, '2018_12_27_035250_create_baiviettuyendung_table', 5),
+(315, '2018_12_27_035345_create_thanhpho_table', 5),
+(316, '2018_12_27_071337_create_ngoaingu_table', 5),
+(317, '2018_12_27_071413_create_chuyenmon_table', 5),
+(318, '2018_12_27_071442_create_tinhocvanphong_table', 5),
+(319, '2018_12_28_033609_create_congviecmongmuon_table', 5),
+(320, '2018_12_28_040242_create_kinhnghiemlamviec_table', 5),
+(321, '2018_12_28_074310_create_congty_table', 5),
+(322, '2018_12_28_092757_create_lienhecongty_table', 5),
+(323, '2019_01_07_042245_create-bvtuyendung-table', 6);
 
 -- --------------------------------------------------------
 
@@ -124,6 +125,42 @@ CREATE TABLE `vp_bangcap` (
   `bc_thoigiannhaphoc` date NOT NULL,
   `bc_thoigianketthuc` date NOT NULL,
   `bc_thongtinbosung` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `created_at` timestamp NULL DEFAULT NULL,
+  `updated_at` timestamp NULL DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+
+-- --------------------------------------------------------
+
+--
+-- Cấu trúc bảng cho bảng `vp_bvtuyendung`
+--
+
+CREATE TABLE `vp_bvtuyendung` (
+  `id` int(10) UNSIGNED NOT NULL,
+  `bv_tieude` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `bv_slug` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `bv_noidungtieude` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `bv_noidungtuyen` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `bv_tentp` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `bv_diadiem` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `bv_soluongtuyen` int(11) NOT NULL,
+  `bv_mucluong` int(11) NOT NULL,
+  `cb_id` int(10) UNSIGNED DEFAULT NULL,
+  `lh_id` int(10) UNSIGNED DEFAULT NULL,
+  `ct_id` int(10) UNSIGNED DEFAULT NULL,
+  `bc_id` int(10) UNSIGNED DEFAULT NULL,
+  `bv_mota` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `bv_gioitinh` int(11) NOT NULL,
+  `bv_quyenloi` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `bv_kinhnghiem` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `bv_hannophs` date NOT NULL,
+  `bv_ngonnguvieths` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `bv_yeucaucv` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `bv_yeucauhs` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `lhcty_id` int(10) UNSIGNED DEFAULT NULL,
+  `bv_nguoidang` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `bv_luotxem` int(11) NOT NULL,
+  `bv_noibat` int(11) NOT NULL,
   `created_at` timestamp NULL DEFAULT NULL,
   `updated_at` timestamp NULL DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
@@ -457,6 +494,17 @@ ALTER TABLE `vp_bangcap`
   ADD KEY `vp_bangcap_hs_id_foreign` (`hs_id`);
 
 --
+-- Chỉ mục cho bảng `vp_bvtuyendung`
+--
+ALTER TABLE `vp_bvtuyendung`
+  ADD PRIMARY KEY (`id`),
+  ADD KEY `vp_bvtuyendung_cb_id_foreign` (`cb_id`),
+  ADD KEY `vp_bvtuyendung_lh_id_foreign` (`lh_id`),
+  ADD KEY `vp_bvtuyendung_ct_id_foreign` (`ct_id`),
+  ADD KEY `vp_bvtuyendung_bc_id_foreign` (`bc_id`),
+  ADD KEY `vp_bvtuyendung_lhcty_id_foreign` (`lhcty_id`);
+
+--
 -- Chỉ mục cho bảng `vp_capbac`
 --
 ALTER TABLE `vp_capbac`
@@ -586,7 +634,7 @@ ALTER TABLE `vp_vieclamdaluu`
 -- AUTO_INCREMENT cho bảng `migrations`
 --
 ALTER TABLE `migrations`
-  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=253;
+  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=324;
 
 --
 -- AUTO_INCREMENT cho bảng `users`
@@ -604,6 +652,12 @@ ALTER TABLE `vp_baiviettuyendung`
 -- AUTO_INCREMENT cho bảng `vp_bangcap`
 --
 ALTER TABLE `vp_bangcap`
+  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT;
+
+--
+-- AUTO_INCREMENT cho bảng `vp_bvtuyendung`
+--
+ALTER TABLE `vp_bvtuyendung`
   MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT;
 
 --
@@ -723,6 +777,16 @@ ALTER TABLE `vp_vieclamdaluu`
 --
 ALTER TABLE `vp_bangcap`
   ADD CONSTRAINT `vp_bangcap_hs_id_foreign` FOREIGN KEY (`hs_id`) REFERENCES `vp_hosoungvien` (`id`);
+
+--
+-- Các ràng buộc cho bảng `vp_bvtuyendung`
+--
+ALTER TABLE `vp_bvtuyendung`
+  ADD CONSTRAINT `vp_bvtuyendung_bc_id_foreign` FOREIGN KEY (`bc_id`) REFERENCES `vp_bangcap` (`id`),
+  ADD CONSTRAINT `vp_bvtuyendung_cb_id_foreign` FOREIGN KEY (`cb_id`) REFERENCES `vp_capbac` (`id`),
+  ADD CONSTRAINT `vp_bvtuyendung_ct_id_foreign` FOREIGN KEY (`ct_id`) REFERENCES `vp_congty` (`id`),
+  ADD CONSTRAINT `vp_bvtuyendung_lh_id_foreign` FOREIGN KEY (`lh_id`) REFERENCES `vp_loaihinh` (`id`),
+  ADD CONSTRAINT `vp_bvtuyendung_lhcty_id_foreign` FOREIGN KEY (`lhcty_id`) REFERENCES `vp_lienhecty` (`id`);
 
 --
 -- Các ràng buộc cho bảng `vp_chitietnganh`
