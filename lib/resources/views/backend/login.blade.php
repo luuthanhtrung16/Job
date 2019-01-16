@@ -8,7 +8,7 @@
     <meta name="description" content="au theme template">
     <meta name="author" content="Hau Nguyen">
     <meta name="keywords" content="au theme template">
-
+    <base href="{{asset('public/backend')}}/" />
     <!-- Title Page-->
     <title>Login</title>
 
@@ -58,7 +58,7 @@
                                 </div>
                                 <div class="login-checkbox">
                                     <label>
-                                        <input type="checkbox" name="remember">Remember Me
+                                        <input type="checkbox" name="remember" value="Remember Me">Remember Me
                                     </label>
                                     <label>
                                         <a href="#">Forgotten Password?</a>
@@ -71,6 +71,7 @@
                                         <button class="au-btn au-btn--block au-btn--blue2">sign in with twitter</button>
                                     </div>
                                 </div>
+                                {{csrf_field()}}
                             </form>
                             <div class="register-link">
                                 <p>

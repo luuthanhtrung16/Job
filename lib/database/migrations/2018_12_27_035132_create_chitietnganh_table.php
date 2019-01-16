@@ -15,7 +15,7 @@ class CreateChitietnganhTable extends Migration
     {
         Schema::create('vp_chitietnganh', function (Blueprint $table) {
             $table->increments('id');
-             $table->integer('nn_id')->unsigned()->nullable();
+            $table->integer('nn_id')->unsigned()->nullable();
             $table->foreign('nn_id')->references('id')->on('vp_nganhnghe')->onDelete('cascade');
             $table->string('ct_tennganh');
             $table->string('ct_tennganhslug');
