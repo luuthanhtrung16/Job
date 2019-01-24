@@ -48,9 +48,10 @@
                         </div>
                         <div class="login-form">
                             <form action="" method="post">
+                                <input type="hidden" name="_token" value="{{csrf_token()}}">
                                 <div class="form-group">
                                     <label>Email Address</label>
-                                    <input class="au-input au-input--full" type="email" name="email" placeholder="Email">
+                                    <input class="au-input au-input--full"  name="email" placeholder="Email">
                                 </div>
                                 <div class="form-group">
                                     <label>Password</label>
@@ -71,7 +72,7 @@
                                         <button class="au-btn au-btn--block au-btn--blue2">sign in with twitter</button>
                                     </div>
                                 </div>
-                                {{csrf_field()}}
+                                
                             </form>
                             <div class="register-link">
                                 <p>
