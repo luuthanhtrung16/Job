@@ -22,6 +22,11 @@ Route::group(['prefix'=>'admin'],function(){
 	Route::get('logout','LoginController@getLogout');
 	Route::group(['prefix'=>'admin','middleware'=>'CheckLogOut'],function(){
 		Route::get('home','HomeController@getHome');
+		Route::group(['prefix'=>'user'],function(){
+			Route::get('/','BackendController@getUser');
+			Route::get('add','BackendController@getAddUser');
+			Route::post('add','BackendController@postAddUser');
+		});
 	});
 });
 

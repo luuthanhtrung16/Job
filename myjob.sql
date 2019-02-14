@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Máy chủ: 127.0.0.1
--- Thời gian đã tạo: Th1 07, 2019 lúc 10:03 AM
+-- Thời gian đã tạo: Th2 14, 2019 lúc 11:16 AM
 -- Phiên bản máy phục vụ: 10.1.37-MariaDB
 -- Phiên bản PHP: 7.2.12
 
@@ -43,29 +43,30 @@ INSERT INTO `migrations` (`id`, `migration`, `batch`) VALUES
 (20, '2018_12_27_025608_create_kinhnghiemlamviec_table', 3),
 (21, '2018_12_27_030007_create_vieclamdaungtuyen_table', 3),
 (24, '2018_12_27_031831_create_congty_table', 3),
-(301, '2014_10_12_000000_create_users_table', 4),
-(302, '2014_10_12_100000_create_password_resets_table', 4),
-(303, '2018_12_26_065823_create_nguoidung_table', 4),
-(304, '2018_12_26_084522_create_hosoungvien_table', 4),
-(305, '2018_12_27_013850_create-bangcap-table', 4),
-(306, '2018_12_27_025444_create_kynang_table', 4),
-(307, '2018_12_27_031553_create_vieclamdaluu_table', 4),
-(308, '2018_12_27_031751_create_hosocongty_table', 4),
-(309, '2018_12_27_031946_create_capbac_table', 4),
-(310, '2018_12_27_032007_create_loaihinh_table', 4),
-(311, '2018_12_27_034948_create_nganhnghe_table', 4),
-(312, '2018_12_27_035057_create_comment_table', 4),
-(313, '2018_12_27_035132_create_chitietnganh_table', 4),
-(314, '2018_12_27_035250_create_baiviettuyendung_table', 5),
-(315, '2018_12_27_035345_create_thanhpho_table', 5),
-(316, '2018_12_27_071337_create_ngoaingu_table', 5),
-(317, '2018_12_27_071413_create_chuyenmon_table', 5),
-(318, '2018_12_27_071442_create_tinhocvanphong_table', 5),
-(319, '2018_12_28_033609_create_congviecmongmuon_table', 5),
-(320, '2018_12_28_040242_create_kinhnghiemlamviec_table', 5),
-(321, '2018_12_28_074310_create_congty_table', 5),
-(322, '2018_12_28_092757_create_lienhecongty_table', 5),
-(323, '2019_01_07_042245_create-bvtuyendung-table', 6);
+(349, '2014_10_12_000000_create_users_table', 4),
+(350, '2014_10_12_100000_create_password_resets_table', 4),
+(351, '2018_12_26_065823_create_nguoidung_table', 4),
+(352, '2018_12_26_084522_create_hosoungvien_table', 4),
+(353, '2018_12_27_013850_create-bangcap-table', 4),
+(354, '2018_12_27_025444_create_kynang_table', 4),
+(355, '2018_12_27_031553_create_vieclamdaluu_table', 4),
+(356, '2018_12_27_031751_create_hosocongty_table', 4),
+(357, '2018_12_27_031946_create_capbac_table', 4),
+(358, '2018_12_27_032007_create_loaihinh_table', 4),
+(359, '2018_12_27_034948_create_nganhnghe_table', 4),
+(360, '2018_12_27_035057_create_comment_table', 4),
+(361, '2018_12_27_035132_create_chitietnganh_table', 4),
+(362, '2018_12_27_035250_create_baiviettuyendung_table', 4),
+(363, '2018_12_27_035345_create_thanhpho_table', 4),
+(364, '2018_12_27_071337_create_ngoaingu_table', 4),
+(365, '2018_12_27_071413_create_chuyenmon_table', 4),
+(366, '2018_12_27_071442_create_tinhocvanphong_table', 4),
+(367, '2018_12_28_033609_create_congviecmongmuon_table', 4),
+(368, '2018_12_28_040242_create_kinhnghiemlamviec_table', 4),
+(369, '2018_12_28_074310_create_congty_table', 4),
+(370, '2018_12_28_092757_create_lienhecongty_table', 4),
+(371, '2019_01_07_042245_create-bvtuyendung-table', 4),
+(372, '2019_01_15_024910_create-user-table', 4);
 
 -- --------------------------------------------------------
 
@@ -448,6 +449,38 @@ CREATE TABLE `vp_tinhocvanphong` (
 -- --------------------------------------------------------
 
 --
+-- Cấu trúc bảng cho bảng `vp_users`
+--
+
+CREATE TABLE `vp_users` (
+  `id` int(10) UNSIGNED NOT NULL,
+  `user_img` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `name` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `ngaysinh` date NOT NULL,
+  `email` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `password` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `level` tinyint(4) NOT NULL,
+  `remember_token` varchar(100) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `created_at` timestamp NULL DEFAULT NULL,
+  `updated_at` timestamp NULL DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+
+--
+-- Đang đổ dữ liệu cho bảng `vp_users`
+--
+
+INSERT INTO `vp_users` (`id`, `user_img`, `name`, `ngaysinh`, `email`, `password`, `level`, `remember_token`, `created_at`, `updated_at`) VALUES
+(1, '', '', '0000-00-00', 'admin@gmail.com', '$2y$10$AmSH.P1hLwwWAvdNAfIh4ezFyZpkTmNTVhdCOBq0YFWCz5XSQPd4q', 1, '2AW0JyzqXnsfRObeHBmZqKndIII7blNrWyaTV1S9aBPWWpAhljAtk2B1W0gB', NULL, NULL),
+(2, '', '', '0000-00-00', 'admin1@gmail.com', '123456', 0, NULL, NULL, NULL),
+(4, '', '', '0000-00-00', 'bin@gmail.com', '$2y$10$lCd9I95ej06sZxA9GpxCmeBxaV.3xWCzBxy0LtAVTXCZw5o44t/Ei', 1, 'yIh2ayplnlTYnqjf1nhOHotyVia2G18KCK9IdcRdyRWDRTAeVYnaX5dgklMT', NULL, NULL),
+(5, 'đâs', '4234', '2323-02-22', '4234@gm', '$2y$10$ty/h24B2LnfwZrsytZjTWegqRcKpMlLf105.PwhgyApQUMiOW6nn6', 0, NULL, '2019-02-14 02:56:34', '2019-02-14 02:56:34'),
+(6, 'đâs', '4234', '2323-02-22', '4234@gm1', '$2y$10$YNq9dqwrlyzobGgPrxhAJ.m9MkLLBJ8uxY5GTM5.0vrwlwR0bJ9zi', 0, NULL, '2019-02-14 02:56:58', '2019-02-14 02:56:58'),
+(7, 'đâs', '4234', '2018-12-04', 'dasdasd@a', '$2y$10$3QDpU9IZe5JSZ46v2ttWHu9ydfK.12vYgu5VlibfXF1SR5F8EJsv6', 1, NULL, '2019-02-14 03:01:06', '2019-02-14 03:01:06'),
+(8, 'đâs', 'dsasadsad', '2012-12-12', 'admin@gmail.com111', '$2y$10$EJgDrqCYQC60OIbuzVtfdewJuh.X2qHxTYEvREC26EbZ20b5vpl1S', 1, NULL, '2019-02-14 03:07:33', '2019-02-14 03:07:33');
+
+-- --------------------------------------------------------
+
+--
 -- Cấu trúc bảng cho bảng `vp_vieclamdaluu`
 --
 
@@ -621,6 +654,12 @@ ALTER TABLE `vp_tinhocvanphong`
   ADD KEY `vp_tinhocvanphong_hs_id_foreign` (`hs_id`);
 
 --
+-- Chỉ mục cho bảng `vp_users`
+--
+ALTER TABLE `vp_users`
+  ADD PRIMARY KEY (`id`);
+
+--
 -- Chỉ mục cho bảng `vp_vieclamdaluu`
 --
 ALTER TABLE `vp_vieclamdaluu`
@@ -634,7 +673,7 @@ ALTER TABLE `vp_vieclamdaluu`
 -- AUTO_INCREMENT cho bảng `migrations`
 --
 ALTER TABLE `migrations`
-  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=324;
+  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=373;
 
 --
 -- AUTO_INCREMENT cho bảng `users`
@@ -761,6 +800,12 @@ ALTER TABLE `vp_thanhpho`
 --
 ALTER TABLE `vp_tinhocvanphong`
   MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT;
+
+--
+-- AUTO_INCREMENT cho bảng `vp_users`
+--
+ALTER TABLE `vp_users`
+  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
 
 --
 -- AUTO_INCREMENT cho bảng `vp_vieclamdaluu`

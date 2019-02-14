@@ -42,7 +42,7 @@
 			<div class="header-mobile__bar">
 				<div class="container-fluid">
 					<div class="header-mobile-inner">
-						<a class="logo" href="index.html">
+						<a class="logo" href="{{asset('admin/admin/home')}}">
 							<img src="images/icon/logo.png" alt="CoolAdmin" />
 
 						</a>
@@ -186,7 +186,7 @@
 		<!-- MENU SIDEBAR-->
 		<aside class="menu-sidebar d-none d-lg-block">
 			<div class="logo">
-				<a href="#">
+				<a href="{{asset('admin/admin/home')}}">
 					<img src="images/icon/logo.png" alt="Cool Admin" />
 
 				</a>
@@ -195,10 +195,25 @@
 				<nav class="navbar-sidebar">
 					<ul class="list-unstyled navbar__list">
 						
-						<li>
-							<a href="chart.html">
-								<i class="fas fa-chart-bar"></i>Quản lý người dùng
+						
+						<li class="has-sub">
+							<a class="js-arrow" href="#">
+								<i class="fas fa-copy"></i>Quản lý admin
 							</a>
+							<ul class="list-unstyled navbar__sub-list js-sub-list">
+								<li>
+									<a href="{{asset('admin/admin/user')}}">Danh sách admin
+									</a>
+								</li>
+								<li>
+									<a href="{{asset('admin/admin/user/add')}}">Thêm admin
+									</a>
+								</li>
+								<li>
+									<a href="forget-pass.html">Forget Password
+									</a>
+								</li>
+							</ul>
 						</li>
 						<!-- <li>
 							<a href="table.html">
