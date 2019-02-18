@@ -11,6 +11,13 @@
 			<div class="card-body card-block">
 				<form action="" method="post" enctype="multipart/form-data" class="form-horizontal">
 					@include('errors.note')
+					@if(count($errors) >0)
+                    <div class="alert alert-danger">
+                        @foreach($errors->all() as $err)
+                        {{$err}}<br/>
+                        @endforeach
+                    </div>
+                @endif
 					<div class="row form-group">
 						<div class="col col-md-3">
 							<label class=" form-control-label">Trạng thái</label>
@@ -26,6 +33,15 @@
 						<div class="col-12 col-md-9">
 							<input type="text" id="name-input" name="name" placeholder="Họ và tên" class="form-control">
 							<small class="help-block form-text">Vui lòng nhập họ và tên</small>
+						</div>
+					</div>
+					<div class="row form-group">
+						<div class="col col-md-3">
+							<label for="name-input" class=" form-control-label">Avatar:</label>
+						</div>
+						<div class="col-12 col-md-9">
+							<input type="file"  name="user_img" placeholder="Họ và tên" class="form-control">
+							
 						</div>
 					</div>
 
