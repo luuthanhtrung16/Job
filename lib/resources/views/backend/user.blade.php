@@ -10,7 +10,7 @@
 					<thead>
 						<tr>
 							<th>STT</th>
-							<th>Mã ID</th>
+							<!-- <th>Mã ID</th> -->
 							<th>Avatar</th>
 							<th>Email</th>
 							<th class="text-right">Loại quản lý</th>
@@ -25,8 +25,8 @@
 						
 						<tr>
 							<td>{{$i}}</td>
-							<td>{{$us["id"]}}</td>
-							<td><img src="{{asset('lib/storage/app/hinhanh/'.$us->user_img)}}"></td>
+							<!-- <td>{{$us["id"]}}</td> -->
+							<td><img src="{{asset('public/upload/avatar_user/'.$us->user_img)}}"></td>
 							<td>{{$us["email"]}}</td>
 							<td class="text-right">{{$us["level"]}}</td>
 							<td class="text-right">{{$us["created_at"]}}</td>

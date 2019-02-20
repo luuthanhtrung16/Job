@@ -45,12 +45,12 @@ class BackendController extends Controller
         $name = $file->getClientOriginalName();//lấy tên hình
         $user_img = str_random(4)."_".$name;//tên hình
         //kiểm tra file có tồn tại ko file_exists()
-        while(file_exists("public/upload/tintuc/".$user_img))
+        while(file_exists("public/upload/avatar_user/".$user_img))
         {
            $user_img = str_random(4)."_".$name;
        }
          //lưu hình
-       $file->move("public/upload/tintuc/",$user_img);
+       $file->move("public/upload/avatar_user/",$user_img);
        $data['addU']->user_img = $user_img;
    }
     else

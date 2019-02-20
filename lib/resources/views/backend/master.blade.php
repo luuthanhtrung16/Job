@@ -466,26 +466,26 @@
 								<div class="account-wrap">
 									<div class="account-item clearfix js-item-menu">
 										<div class="image">
-											<img src="images/icon/avatar-01.jpg" alt="John Doe" />
+											<img src="../../public/upload/avatar_user/{{Auth::user()->user_img}}" alt="John Doe" />
 										</div>
 										<div class="content">
-											<a class="js-acc-btn" href="#">john doe
+											<a class="js-acc-btn" href="#">{{Auth::user()->name}}
 											</a>
 										</div>
 										<div class="account-dropdown js-dropdown">
 											<div class="info clearfix">
 												<div class="image">
 													<a href="#">
-														<img src="images/icon/avatar-01.jpg" alt="John Doe" />
+														<img src="../../public/upload/avatar_user/{{Auth::user()->user_img}}" alt="{{Auth::user()->name}}" />
 
 													</a>
 												</div>
 												<div class="content">
 													<h5 class="name">
-														<a href="#">john doe
+														<a href="#">{{Auth::user()->name}}
 														</a>
 													</h5>
-													<span class="email">johndoe@example.com
+													<span class="email">{{Auth::user()->email}}
 													</span>
 												</div>
 											</div>
