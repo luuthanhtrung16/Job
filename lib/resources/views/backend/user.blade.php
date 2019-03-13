@@ -37,7 +37,9 @@
 						@endforeach
 					</tbody>
 				</table>
+				
 			</div>
+			{{$userhome->links()}}
 			<!-- End table -->
 		</div>
 	</div>

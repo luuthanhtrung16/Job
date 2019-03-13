@@ -13,11 +13,7 @@
 		{{Session::get('errors')}}
 	</p>
 @endif
-@if(Session::has('errors'))
-	<p class="alert alert-danger">
-		{{Session::get('errors')}}
-	</p>
-@endif
+
 
 @if(Session::has('token'))
 	<p class="alert alert-danger">

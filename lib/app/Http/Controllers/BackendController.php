@@ -7,7 +7,7 @@ use App\User;
 class BackendController extends Controller
 {
     public function getUser(){
-    	$data['userhome'] = User::all();
+    	$data['userhome'] = User::orderBy('id','desc')->paginate(5);
     	return view("backend.user",$data);
     }
     public function getAddUser(){
